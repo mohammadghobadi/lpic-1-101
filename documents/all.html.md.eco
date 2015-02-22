@@ -1,0 +1,29 @@
+---
+layout: onepage
+title: راهنمای مطالعه LPIC-1
+---
+
+<% for article in @getCollection("html").findAllLive({relativeOutDirPath: "chapters"},[{order:1}]).toJSON(): %>
+
+<% if article.chapter != @previous_chapter : %> 
+
+<h1 ><%- article.chapter %></h1 > 
+
+<% @previous_chapter = article.chapter %> 
+
+<% end %> 
+
+<h2 ><%- article.title %></h2 > 
+
+<%- article.content %> 
+
+
+<hr><b>راهنمای مطالعه LPIC-1</b>
+<br />
+<br />تهیه شده توسط شرکت «<b>سیوک</b>» با همکاری جمعی از دانش آموختگان دوره‌های LPI
+<br />
+<br />برای دسترسی به آخرین نسخه کتاب در فرمت‌های مختلف و همچنین حمایت مالی از پروژه کتاب‌هایی برای گیک‌ها، به سایت 101.cvak.ir و بخش <b>حمایت</b> مراجعه کنید.
+<hr>
+
+
+<% end %> 
